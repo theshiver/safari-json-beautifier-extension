@@ -1,0 +1,42 @@
+{
+    "manifest_version": 3,
+    "default_locale": "en",
+
+    "name": "JSON Beautifier",
+    "description": "Beautify JSON data",
+    "version": "1.0",
+
+    "icons": {
+        "48": "images/icon-48.png",
+        "96": "images/icon-96.png",
+        "128": "images/icon-128.png",
+        "256": "images/icon-256.png",
+        "512": "images/icon-512.png"
+    },
+    
+    "permissions": ["activeTab", "webRequest", "webRequestBlocking"],
+    
+    "browser_action": {
+        "default_icon": "icon.png"
+      },
+
+    "background": {
+        "scripts": [ "background.js" ],
+        "persistent": false
+    },
+
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }],
+
+    "action": {
+        "default_icon": "images/toolbar-icon.svg"
+    },
+    
+    "developer": {
+       "name": "Can Cetin",
+       "url": "https://cancetin.com"
+     }
+}

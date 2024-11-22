@@ -1,0 +1,10 @@
+{
+    "extension_name": {
+        "message": "Json Beautifier",
+        "description": ""
+    },
+    "extension_description": {
+        "message": "This is Json Beautifier.",
+        "description": ""
+    }
+}
